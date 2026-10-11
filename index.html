@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voxel Survival</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="hud"></div>
+    <div id="damage-flash"></div>
+    <div id="break-progress"></div>
+
+    <div id="chat-ui">
+      <div id="chat-log"></div>
+      <input id="chat-input" type="text" placeholder="Type message or /kick peerId..." />
+    </div>
+
+    <div id="inventory-overlay" class="hidden">
+      <div class="inventory-panel">
+        <div class="inventory-header">
+          <h2>Inventory</h2>
+          <button id="close-inventory-btn" type="button">Close</button>
+        </div>
+
+        <div class="inventory-body">
+          <div class="inventory-column">
+            <h3>Main Inventory</h3>
+            <div id="inventory-grid" class="inventory-grid"></div>
+          </div>
+
+          <div class="inventory-column">
+            <h3>Hotbar</h3>
+            <div id="hotbar-grid" class="hotbar-grid"></div>
+
+            <h3>2x2 Crafting</h3>
+            <div id="crafting-2x2" class="crafting-grid small"></div>
+            <button id="craft-2x2-btn" class="craft-btn" type="button">Craft 2x2</button>
+
+            <h3>3x3 Crafting</h3>
+            <div id="crafting-3x3" class="crafting-grid large"></div>
+            <button id="craft-3x3-btn" class="craft-btn" type="button">Craft 3x3</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
